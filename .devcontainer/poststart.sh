@@ -19,4 +19,9 @@ echo "Init server project"
 cd /AlphaB/app
 npm i
 
+echo "Set git-hook path"
+cd /AlphaB/app
+git config core.hooksPath '.git-hooks'
+npm install --global git-conventional-commits
+
 echo "Install successfull"
