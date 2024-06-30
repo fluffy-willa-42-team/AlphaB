@@ -1,12 +1,8 @@
-version: '3.8'
 services:
-    devcontainer:
-        image: mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye
-        networks:
-            - dev
-        volumes:
-            - ..:/AlphaB:cached
-        command: bash -c "sleep infinity"
-
-networks:
-    dev:
+  devcontainer:
+    image: mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye
+    volumes:
+      - ..:/AlphaB:cached
+    ports:
+      - 8080:8080
+    command: bash -c "sleep infinity"
